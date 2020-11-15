@@ -1,0 +1,52 @@
+# Programmer: Zac E.
+# Date: 11/14/2020
+# Purpose: Draws a very basic example of a tranisiting exoplanet and the associating light curve.
+
+
+
+import turtle
+
+import time
+
+screen = turtle.Screen()
+screen.setup(600,400)
+screen.bgpic('Photo 2.gif')
+time.sleep(2)
+
+Sun = turtle.Turtle()
+Sun.pu()
+Sun.sety(-325)
+Sun.pd()                        # draws a line
+Sun.speed(7.5)
+Sun.circle(325)
+
+Sun.pen(pencolor="yellow", fillcolor="yellow", pensize=2, speed=9)
+Sun.begin_fill()
+Sun.circle(325)
+Sun.end_fill()
+
+exoplanet = turtle.Turtle()
+exoplanet.fillcolor("blue")     # This changes the color of the cursor
+exoplanet.shape('circle')       # creates a circle as a cursor
+exoplanet.pu()
+exoplanet.setx(-425)
+exoplanet.speed(1)
+exoplanet.fd(425*2)
+
+
+line = turtle.Turtle()          # Provides line for light curve graph
+line.pen(pencolor="white", fillcolor="white", pensize=4, speed=9)
+line.pu()
+line.sety(-320)
+line.setx(-425)
+line.pd()
+line.speed(1)
+line.fd(100)
+line.rt(45)
+line.fd(75)
+line.lt(45)
+line.fd(180*3)
+line.lt(45)
+line.fd(75)
+line.rt(45)
+line.fd(100)
